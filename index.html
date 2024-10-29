@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Демонстрація циклу for...in</title>
+</head>
+<body>
+    <h1>Демонстрація циклу for...in в JavaScript</h1>
+
+    <h2>Інформація про ноутбук:</h2>
+    <ul id="laptop-info"></ul>
+
+    <script>
+        const laptop = {
+            brand: "Apple",
+            model: "MacBook Pro",
+            year: 2021,
+            color: "сірий",
+            screenSize: "13 дюймів"
+        };
+
+        const laptopInfoList = document.getElementById('laptop-info');
+        for (let property in laptop) {
+            let li = document.createElement('li');
+            li.textContent = `${property}: ${laptop[property]}`;
+            laptopInfoList.appendChild(li);
+        }
+    </script>
+</body>
+</html>
